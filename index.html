@@ -158,6 +158,182 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-AB PLC" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="0-目录索引"><a href="#0-目录索引" class="headerlink" title="0 目录索引"></a>0 目录索引</h1><p>[TOC]</p>
+<h2 id="0-0-软件安装注意事项"><a href="#0-0-软件安装注意事项" class="headerlink" title="0.0 软件安装注意事项 ^"></a>0.0 软件安装注意事项 <a href="#0目录索引">^</a></h2><p>RSLogix安装时建议将所有的组件全部安装，并且安装时建议先安装RSLinx软件。<br>安装时因为有些程序包不包括多媒体信息，所以建议将多媒体信息这个安装选项去除。具体安装以后请自行练习。</p>
+<h1 id="1-RSLogix-5000介绍"><a href="#1-RSLogix-5000介绍" class="headerlink" title="1 RSLogix 5000介绍 ^"></a>1 RSLogix 5000介绍 <a href="#0目录索引">^</a></h1><p>RSLogix 5000，PLC编程软件<br>RSLogix 5000的通讯必须安装RSLinx才能与AB的PLC进行通讯。</p>
+<h1 id="2-RSLogix-5000安装（V20-01）"><a href="#2-RSLogix-5000安装（V20-01）" class="headerlink" title="2 RSLogix 5000安装（V20.01） ^"></a>2 RSLogix 5000安装（V20.01） <a href="#0目录索引">^</a></h1><h2 id="2-1-安装步骤"><a href="#2-1-安装步骤" class="headerlink" title="2.1 安装步骤 ^"></a>2.1 安装步骤 <a href="#0目录索引">^</a></h2><ul>
+<li>Setup.exe -&gt; </li>
+<li><p>Serial Number:2022023456 -&gt;</p>
+</li>
+<li><p>路径选择，一般选默认路径 -&gt;</p>
+</li>
+</ul>
+<h2 id="2-2-安装相关问题"><a href="#2-2-安装相关问题" class="headerlink" title="2.2 安装相关问题 ^"></a>2.2 安装相关问题 <a href="#0目录索引">^</a></h2><h3 id="2-2-1-安装问题：点击Setup-gt-出现如下弹窗，提示MSXML4相关错误"><a href="#2-2-1-安装问题：点击Setup-gt-出现如下弹窗，提示MSXML4相关错误" class="headerlink" title="2.2.1 安装问题：点击Setup -&gt; 出现如下弹窗，提示MSXML4相关错误 ^"></a>2.2.1 安装问题：点击Setup -&gt; 出现如下弹窗，提示MSXML4相关错误 <a href="#0目录索引">^</a></h3><p><strong>RSLogix 5000版本：V20.01</strong><br><strong>系统版本：win7专业版 SP1</strong><br>按照提示路径，检查log文件发现未安装MSXML4</p>
+<p><strong><font color="#008000">解决办法：</font></strong><br>下载MSXML4.0（msxmlchs.msi这个文件），安装完成后重新开始安装RSLogix 5000。</p>
+<h3 id="2-2-2-安装问题：点击Setup-gt-出现如下弹窗，Windows-Vista不支持RSLogix-5000"><a href="#2-2-2-安装问题：点击Setup-gt-出现如下弹窗，Windows-Vista不支持RSLogix-5000" class="headerlink" title="2.2.2 安装问题：点击Setup -&gt; 出现如下弹窗，Windows Vista不支持RSLogix 5000 ^"></a>2.2.2 安装问题：点击Setup -&gt; 出现如下弹窗，Windows Vista不支持RSLogix 5000 <a href="#0目录索引">^</a></h3><p><strong>RSLogix 5000版本：V20.01</strong><br><strong>系统版本：win7专业版 SP1</strong><br><strong><font color="#008000">解决方法：</font></strong><br>Setup.exe(右键单击) -&gt; 属性 -&gt; 兼容性 -&gt;<br>去掉”以兼容模式运行这个程序 - Windows Vista”前面的钩（如果打钩为灰色，选择 -&gt; 更改所有用户的设置）</p>
+<h2 id="2-3-注册破解"><a href="#2-3-注册破解" class="headerlink" title="2.3 注册破解 ^"></a>2.3 注册破解 <a href="#0目录索引">^</a></h2><ul>
+<li>第一步：授权管理器的破解及假网络授权（适用于授权管理器3.30，3.40，3.50）：</li>
+</ul>
+<ol>
+<li>ftasystem.lic放到如下目录覆盖同名文件：<br>C:\Documents and Settings\All Users\Documents\Rockwell Automation\Activations </li>
+<li>flexsvr.exe放到以下目录，覆盖同名文件（建议备份一下原文件）：<br>C:\Program Files\Rockwell Software\FactoryTalk Activation<br>如果Flexsvr.exe不让覆盖，就把服务FactoryTalk Activation Service先停一下。</li>
+</ol>
+<ul>
+<li>第二步：<br><strong>2.1、RS5000 v19.01 cn / rsl5kcp.dll</strong><br>在如下目录覆盖<br>C:\Program Files\Rockwell Software\RSLogix 5000\CHS\v19\Bin<br><strong>2.2、Emu5000 V19.01、V20.01 / RSEM5K32.dll</strong><br>在如下目录覆盖<br>C:\Program Files\Rockwell Software\RSLogix Emulate 5000<br><strong>2.3、Rslinx2.58、2.59、3.51 / RSwd32.dll<br>在如下目录覆盖，覆盖前要关闭Rslinx<br>C:\Program Files\Rockwell Software\RSLinx
+</strong>2.4、SE6.0中文，适合ME6.0 RSves32.dll**<br>在如下目录覆盖，覆盖前，结束RsvcHost.exe任务<br>C:\Program Files\Common Files\Rockwell<br>2.5、Rsnetworx C&amp;D V10.1<br>RSntwc32.dll for controlnet<br>RSntwd32.dll for devicenet<br>C:\Program Files\Rockwell Software\RSNetWorxii<br>2.5 RSNetworx CD.zip<br>2.5.1、Rsnetworx C&amp;D&amp;E V11<br>C:\Program Files\Rockwell Software\RSNetWorxii<br>RSntwc32.dll for controlnet<br>RSntwd32.dll for devicenet<br>RSntwe32.dll for Ethernet<br>RSNetworx wcde v11.zip<br>2.6、SE6.1 RSves32.dll<br>C:\Program Files\Common Files\Rockwell<br>2.6 RSves32.zip<br>2.7、RS5000 V20中文或英文 rsl5kcp.dll<br>C:\Program Files\Rockwell Software\RSLogix 5000\ENU\v20\Bin<br>2.7 rsl5kcp.zip<br>2.8、SoftLogix5800 V20 RSSL5K32.dll<br>C:\Program Files\Rockwell Automation\SoftLogix5800<br>RSSL5K32.zip<br>2.9、RSview32 7.60 RSCVW32.DLL<br>C:\Program Files\Rockwell Software\RDM<br>RSCVW32.zip<h1 id="3-创建工程"><a href="#3-创建工程" class="headerlink" title="3 创建工程 ^"></a>3 创建工程 <a href="#0目录索引">^</a></h1><h2 id="3-1-打开软件"><a href="#3-1-打开软件" class="headerlink" title="3.1 打开软件 ^"></a>3.1 打开软件 <a href="#0目录索引">^</a></h2><font color="#008000" size="2" face="Consolas">开始 -&gt; 所有程序 -&gt; RockWell Software -&gt; RSLogix 5000 Enterprise Series -&gt; RSLogix 5000</font><br>## 3.2 新建项目 <a href="#0目录索引">^</a><br><font color="#008000" size="2" face="Consolas">File -&gt; New -&gt; 出现如下对话框</font>
+
+</li>
+</ul>
+<p><strong>Type:</strong>选择控制器类型。可以是ControlLogix、CompactLogix、DriveLogix或SoftLogix控制器。所有Logix控制器都仅需要一个编程软件包。<br><br><strong>Revision:</strong>版本号，使用软件的版本号，必须选用与当前实际使用的控制器相一致的版本号，否则，组态完成后将无法下载。您可以在这里选择项目创建所使用的固件版本。当前有效的版本为10、11、12、13、15和16。<br><br><strong>Redundancy Enabled:</strong>冗余使能，被选择时控制器将作为冗余控制器<br><br><strong>Name:</strong>控制器和项目的名称。<br><br><strong>Description:</strong>项目描述（选填）。<br><br><strong>Chassis Type:</strong>机架类型，选择您将使用的机架大小。这并不是所有类型的控制器都适用的。5种类型，4、7、10、13、17槽。<br><br><strong>Slot:</strong>本项目要下载的目标控制器在机架上槽的位置，槽号从0开始。这并不是对所有类型的控制器都适用的，例如CompactLogix便固定使用插槽零。<br><br><strong>Create In:</strong>电脑路径。<br><br><strong>点击OK创建项目</strong></p>
+<p><font color="#ff0000" size="2" face="Consolas">注意：项目存储在windows系统下，项目文件后缀.ACD，存储路径不能有汉字。</font></p>
+<h2 id="3-3-工程目录介绍"><a href="#3-3-工程目录介绍" class="headerlink" title="3.3 工程目录介绍 ^"></a>3.3 工程目录介绍 <a href="#0目录索引">^</a></h2><p>工程目录:包含用户工程文件内的所有文件夹和文件</p>
+<ul>
+<li>Controller xx:控制器文件夹<ul>
+<li>Controller Tags:控制器标签</li>
+<li>控制器故障处理器</li>
+<li>加电处理器</li>
+</ul>
+</li>
+<li>Tasks:任务文件夹<ul>
+<li>MainTask<ul>
+<li>MainProgram<ul>
+<li>程序标签</li>
+<li>MainRoutine</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>未规划的程序/相位</li>
+</ul>
+</li>
+<li>Motion Groups:运动控制文件夹<ul>
+<li>未归类轴</li>
+</ul>
+</li>
+<li>Add-On Instructions:自定义Add-On指令</li>
+<li>Data Types:数据管理文件夹</li>
+<li>Trends:趋势图文件夹</li>
+<li>Data Types</li>
+<li>I/O Configuration:I/O组态文件夹<h2 id="3-4-控制器属性的组态和监视"><a href="#3-4-控制器属性的组态和监视" class="headerlink" title="3.4 控制器属性的组态和监视 ^"></a>3.4 控制器属性的组态和监视 <a href="#0目录索引">^</a></h2>控制器属性的组态和监视是项目设置十分重要的部分，决定了控制器的性能和工作方式<br>1.4.1 控制器属性组态<br>Controller xx:控制器文件夹 -&gt; 右键单击 -&gt; Properties</li>
+</ul>
+<p>General:通用选项卡<br>-&gt; Change Controller:修改控制器的类型和版本<br>Serial Port:串口组态<br>-&gt; Mode:System&lt;系统方式&gt;/User&lt;用户方式&gt;，作为编程口是系统方式<br>-&gt; Baud Rate:波特率<br>-&gt; Data Bits:数据位<br>-&gt; Parity:Even&lt;偶校验&gt;/None&lt;不校验&gt;/Odd&lt;奇校验&gt;<br>-&gt; Stop Bits:停止位，通常选1，ASCII码选2<br>-&gt; Control Line:No Handshake&lt;不握手&gt;/Full Duplex&lt;全双工&gt;/Half Duplex&lt;半双工&gt;，如用远程猫的访问，此项必选全双工或半双工<br>-&gt; RTS Send Delay:打开发送请求后，传送第一个字符的延迟时间<br>-&gt; RTS Off Delay:<br>-&gt; DCD Wait Delay:</p>
+<h2 id="3-5-硬件组态（配置I-O模块）"><a href="#3-5-硬件组态（配置I-O模块）" class="headerlink" title="3.5 硬件组态（配置I/O模块） ^"></a>3.5 硬件组态（配置I/O模块） <a href="#0目录索引">^</a></h2><h3 id="3-5-1-在RSlinx中查看模块及槽号"><a href="#3-5-1-在RSlinx中查看模块及槽号" class="headerlink" title="3.5.1 在RSlinx中查看模块及槽号 ^"></a>3.5.1 在RSlinx中查看模块及槽号 <a href="#0目录索引">^</a></h3><p><font color="#008000" size="2" face="Consolas">打开RSLinx -&gt; 右键单击所需查看模块 -&gt; Device Properties.模块属性 -&gt; Revision:2.6（举例） -&gt; 即主要硬件版本为2</font></p>
+<h3 id="3-5-2-硬件组态（配置I-O模块）"><a href="#3-5-2-硬件组态（配置I-O模块）" class="headerlink" title="3.5.2 硬件组态（配置I/O模块） ^"></a>3.5.2 硬件组态（配置I/O模块） <a href="#0目录索引">^</a></h3><p><font color="#008000" size="2" face="Consolas">工程目录树 -&gt; 右键单击I/O Configuration文件夹 -&gt; New Module</font></p>
+<h4 id="3-5-2-1-组态控制器模块"><a href="#3-5-2-1-组态控制器模块" class="headerlink" title="3.5.2.1 组态控制器模块 ^"></a>3.5.2.1 组态控制器模块 <a href="#0目录索引">^</a></h4><p>Controllers:控制器模块</p>
+<h4 id="3-5-2-2-组态通讯模块"><a href="#3-5-2-2-组态通讯模块" class="headerlink" title="3.5.2.2 组态通讯模块 ^"></a>3.5.2.2 组态通讯模块 <a href="#0目录索引">^</a></h4><p>Communications:通讯模块</p>
+<h4 id="3-5-2-3-组态DI模块"><a href="#3-5-2-3-组态DI模块" class="headerlink" title="3.5.2.3 组态DI模块 ^"></a>3.5.2.3 组态DI模块 <a href="#0目录索引">^</a></h4><p>Digital:数字量模块</p>
+<h4 id="3-5-2-4-组态DO模块"><a href="#3-5-2-4-组态DO模块" class="headerlink" title="3.5.2.4 组态DO模块 ^"></a>3.5.2.4 组态DO模块 <a href="#0目录索引">^</a></h4><p>Digital:数字量模块</p>
+<ul>
+<li>1756-IB16D数字量输入模块<blockquote>
+<p>I/O Configuration -&gt; 右键单击 -&gt; New Module… -&gt; Select Module<br>-&gt; Digital:数字量模块 -&gt; 展开选择1756-IB16D -&gt; OK<br>-&gt; Select Major Revision（弹窗.选择所组态模块主要硬件版本号码）<br>|————————————————————-<br>|在RSLinx中获取硬件版本信息</p>
+</blockquote>
+</li>
+</ul>
+<p>|————————————————————-<br>-&gt; 选择2（举例） -&gt; OK -&gt; New Module（弹窗.模块组态的基本信息）<br>-&gt; Name:填写模块名称.可根据工程实际自行填写，也可以不填写<br>-&gt; Slot:槽号.物理地址<br>-&gt; Description</p>
+<h4 id="3-5-2-5-组态AI模块"><a href="#3-5-2-5-组态AI模块" class="headerlink" title="3.5.2.5 组态AI模块 ^"></a>3.5.2.5 组态AI模块 <a href="#0目录索引">^</a></h4><p>Analog:模拟量模块</p>
+<blockquote>
+<p>1756-IB16D数字量输入模块<br> -&gt; I/O Configuration -&gt;右键单击 -&gt; New Module…<br>Analog:模拟量模块</p>
+</blockquote>
+<h4 id="3-5-2-6-组态AO模块"><a href="#3-5-2-6-组态AO模块" class="headerlink" title="3.5.2.6 组态AO模块 ^"></a>3.5.2.6 组态AO模块 <a href="#0目录索引">^</a></h4><p>Analog:模拟量模块</p>
+<h4 id="3-5-2-7-Drives-变频器模块"><a href="#3-5-2-7-Drives-变频器模块" class="headerlink" title="3.5.2.7 Drives:变频器模块 ^"></a>3.5.2.7 Drives:变频器模块 <a href="#0目录索引">^</a></h4><h4 id="3-5-2-8-Motion-伺服模块"><a href="#3-5-2-8-Motion-伺服模块" class="headerlink" title="3.5.2.8 Motion:伺服模块 ^"></a>3.5.2.8 Motion:伺服模块 <a href="#0目录索引">^</a></h4><h4 id="3-5-2-9-Motion-伺服模块"><a href="#3-5-2-9-Motion-伺服模块" class="headerlink" title="3.5.2.9 Motion:伺服模块 ^"></a>3.5.2.9 Motion:伺服模块 <a href="#0目录索引">^</a></h4><h4 id="3-5-2-10-Other-第三方模块"><a href="#3-5-2-10-Other-第三方模块" class="headerlink" title="3.5.2.10 Other:第三方模块 ^"></a>3.5.2.10 Other:第三方模块 <a href="#0目录索引">^</a></h4><h4 id="3-5-2-11-Specialty-其他模块"><a href="#3-5-2-11-Specialty-其他模块" class="headerlink" title="3.5.2.11 Specialty:其他模块 ^"></a>3.5.2.11 Specialty:其他模块 <a href="#0目录索引">^</a></h4><h1 id="4-建立标签"><a href="#4-建立标签" class="headerlink" title="4 建立标签"></a>4 建立标签</h1><h2 id="4-1-标签简介"><a href="#4-1-标签简介" class="headerlink" title="4.1 标签简介"></a>4.1 标签简介</h2><p>标签：标签相当于Step 7中的符号名，对于不和输入、输出点建立联系的标签可相当于中间变量。</p>
+<h2 id="4-2-查看编辑标签"><a href="#4-2-查看编辑标签" class="headerlink" title="4.2 查看编辑标签"></a>4.2 查看编辑标签</h2><p><font color="#008000" size="2" face="Consolas">工程目录树 -&gt; 点击’+’展开Controller xxx文件夹 -&gt; 双击Controller Tags</font></p>
+<h2 id="4-3-建立标签"><a href="#4-3-建立标签" class="headerlink" title="4.3 建立标签"></a>4.3 建立标签</h2><ul>
+<li>配置完I/O模块后会自动生成控制器作用域的标签。</li>
+</ul>
+<p>如图所示，Local:1:I.Data.0，这个标签表示第一号槽输入模块的第一个数字量输入点。</p>
+<p>如上图所示：<br>Local:1:C，表示第一槽的模块的配置文件<br>Local:1:I，表示第一槽的输入模块的输入文件<br>展开后的格式：</p>
+<p>Local:1:I.Fault 第一槽的模块的故障状态字<br>Local:1:I.Data 第一槽的输入模块的输入信号的状态，相当于西门子的ID0</p>
+<p>标签可以在配置I/O模块之前建立，同时因为标签不一定需要和输入输出点联系，所以可以建立全局的中间变量供编程使用。</p>
+<p>工程路径显示：这是本项目上载或下载到达控制器的路径，从未在线过的项目，在此处显示的是None（无）。</p>
+<p>查看当前网络，并为该选项设置一个工程路径</p>
+<h1 id="5-编程教程"><a href="#5-编程教程" class="headerlink" title="5 编程教程 ^"></a>5 编程教程 <a href="#0目录索引">^</a></h1><h2 id="5-1-程序组织结构"><a href="#5-1-程序组织结构" class="headerlink" title="5.1 程序组织结构 ^"></a>5.1 程序组织结构 <a href="#0目录索引">^</a></h2><p>AB PLC的用户程序以任务的形式组织，主要分为连续型、周期型和事件触发型三种。每个项目最多可定义32个任务，其中可以定义且只能定义一个连续型的任务，其余均为周期型或事件触发型任务。</p>
+<ul>
+<li>连续型:</li>
+</ul>
+<p>连续型任务始终运行。当连续型任务完成一次全扫描之后，它会立刻重新开始进行扫描。<br>一个工程可以没有连续型任务，如果需要，只能建立一个连续型任务。</p>
+<ul>
+<li><p>周期型:</p>
+</li>
+<li><p>事件触发型:</p>
+</li>
+</ul>
+<p>注意：每个任务必须制定任务类型：连续任务、周期任务、事件任务。<br>每个任务可以有多个程序，程序的执行顺序可以通过编程软件设置。<br>每个程序必须指定一个子例程为主例程，作为程序执行的起始点。<br>一个控制器只能有一个连续任务。</p>
+<p>任务属性</p>
+<h2 id="5-2-梯形图编程示例"><a href="#5-2-梯形图编程示例" class="headerlink" title="5.2 梯形图编程示例 ^"></a>5.2 梯形图编程示例 <a href="#0目录索引">^</a></h2><h3 id="5-2-1-梯形图简介"><a href="#5-2-1-梯形图简介" class="headerlink" title="5.2.1 梯形图简介"></a>5.2.1 梯形图简介</h3><h3 id="5-2-2-程序创建"><a href="#5-2-2-程序创建" class="headerlink" title="5.2.2 程序创建"></a>5.2.2 程序创建</h3><p><font color="#008000" size="2" face="Consolas"></font><br>双击主例程MainRoutine，展开空白梯级。</p>
+<h3 id="5-2-1-位指令"><a href="#5-2-1-位指令" class="headerlink" title="5.2.1 位指令 ^"></a>5.2.1 位指令 <a href="#0目录索引">^</a></h3><p>增加梯级<br>增加分支<br>增加平行分支<br>是否闭合（常开）<br>是否断开（常闭）<br>置位<br>保持置位<br>保持清零<br>一次响应<br>上升沿触发<br>下降沿触发</p>
+<h2 id="5-3-编程"><a href="#5-3-编程" class="headerlink" title="5.3 编程 ^"></a>5.3 编程 <a href="#0目录索引">^</a></h2><h3 id="5-3-1-简介"><a href="#5-3-1-简介" class="headerlink" title="5.3.1 简介 ^"></a>5.3.1 简介 <a href="#0目录索引">^</a></h3><p>AB PLC和西门子PLC类似，也支持多种语言的编程，例如梯形图（LAD）、功能块（FBD）、结构化编程语言（SCL）。</p>
+<h3 id="5-3-2-梯形图编程"><a href="#5-3-2-梯形图编程" class="headerlink" title="5.3.2 梯形图编程 ^"></a>5.3.2 梯形图编程 <a href="#0目录索引">^</a></h3><p>梯形图的梯级相当于Step 7里面的程序段（Network），能流从梯级的左边流向右边；指令的前面可以称为梯级条件，能流到达时梯级条件为真，能流不能到达时梯级条件为假；指令的执行情况与梯级条件相关。<br>梯形图的编辑与Step 7的程序一样，可以用拖指令的方式，也可以用双击的方式。</p>
+<h1 id="6-建立在线连接"><a href="#6-建立在线连接" class="headerlink" title="6 建立在线连接 ^"></a>6 建立在线连接 <a href="#0目录索引">^</a></h1><h1 id="10-RSLogix-Emulate5000仿真测试"><a href="#10-RSLogix-Emulate5000仿真测试" class="headerlink" title="10 RSLogix Emulate5000仿真测试 ^"></a>10 RSLogix Emulate5000仿真测试 <a href="#0目录索引">^</a></h1><h2 id="10-1-打开软件"><a href="#10-1-打开软件" class="headerlink" title="10.1 打开软件 ^"></a>10.1 打开软件 <a href="#0目录索引">^</a></h2><p>Rockwell Software -&gt; RSLogix Emulate5000<br>组态画面 RSLogix Emulate5000 Chassis Monitor<br>注意事项：<br>程序：<br>Logix平台的标签结构<br>标签是在ControlLogix通过标签来实现的，<br>寻址也采用标签的形式<br>特点是，无需手动进行IO硬设<br>支持结构体和数组。<br>标签是<br>标签分类：<br>Controller Tags<br>Program Tags<br>New<br>Sy<br>在编程时创建标签<br>控制器的数据类型</p>
+<p>工具栏<br>冗余使能，此选项被<br>Name<br>目标控制器在机架上所在槽的位置，槽号是从0号槽开始排列的<br>Create In：存放路径</p>
+<p>Add-On Instructions<br>Data Types数据管理文件夹<br>Trends趋势图文件夹<br>I/O Configuration</p>
+<p>工程路径显示</p>
+<p>项目流程<br>新建项目<br>File - New<br>工程目录<br>Controller P1<br>修改控制器属性<br>Tasks 任务文件夹 编程工作 程序在这个文件夹内<br>Motion Groups 运动 伺服<br>Add-On Instructions 自定义功能<br>Data Types 数据管理文件夹 包括系统预定义类型<br>Trends 趋势图文件夹<br>I/O Configuration I/O组态文件夹</p>
+<p>1756:ControlLogix控制器<br>1768/1769:CompactLogix控制器<br>1789:SoftLogix控制器<br>1794:FlexLogix控制器<br>Emulator:模拟控制器<br>DriveLogix控制器</p>
+<h1 id="第五讲-控制器的数据类型（未做完笔记）"><a href="#第五讲-控制器的数据类型（未做完笔记）" class="headerlink" title="第五讲 控制器的数据类型（未做完笔记）"></a>第五讲 控制器的数据类型（未做完笔记）</h1><ol>
+<li>基本数据类型<br>数据类型是用于定义标签使用的数据位、字节或字的个数。数据类型的选择是根据数据源而定的。<br>|数据类型|定义|<br>|—-|—-|<br>|xx|xx|</li>
+<li><p>系统预定义结构数据类型</p>
+</li>
+<li><p>用户自定义结构数据类型<br>字符串自定义数据结构<br>用户自定义数据结构<br>AOI自定义数据结构</p>
+</li>
+<li>数组<h1 id="第八讲-IO模块的组态"><a href="#第八讲-IO模块的组态" class="headerlink" title="第八讲 IO模块的组态"></a>第八讲 IO模块的组态</h1><h1 id="第九讲-创建趋势图"><a href="#第九讲-创建趋势图" class="headerlink" title="第九讲 创建趋势图"></a>第九讲 创建趋势图</h1><h2 id="9-1-趋势图的监视功能"><a href="#9-1-趋势图的监视功能" class="headerlink" title="9.1 趋势图的监视功能"></a>9.1 趋势图的监视功能</h2>趋势图具有强大的监视功能，分析控制系统故障常常需要了解控制器数据的变化，有时，数据变化是一闪而过的，不易看出产生的影响，利用趋势曲线监视控制器数据，可以做到捕获快速变化的数据，最快的捕获时间为1ms，进行历史数据的分析，将采集的数据产生报告。</li>
+</ol>
+<h2 id="9-2-控制器的趋势图特性"><a href="#9-2-控制器的趋势图特性" class="headerlink" title="9.2 控制器的趋势图特性"></a>9.2 控制器的趋势图特性</h2><ul>
+<li>每个控制器可以创建多个Trend文件</li>
+<li>每个Trend文件最多可以跟踪8个数据（8支记录笔）</li>
+<li>用户可以自定义采集数据的时间</li>
+<li>可跟踪的数据类型有BOOL、SINT、INT、DINT、REAL</li>
+<li>可将要分析的数据采集存于Excel文件，允许用户输入起始时间和结束时间以摘取一段时间的数据采集<h2 id="9-3-创建趋势图"><a href="#9-3-创建趋势图" class="headerlink" title="9.3 创建趋势图"></a>9.3 创建趋势图</h2>Trends -&gt; 右键单击 -&gt; New Trend<br>Name:输入趋势图名称<br>Description:注释<br>Sample Period:采集时间，默认为10ms，范围1ms~30min<br>下一步<br>Scope:作用域，控制器域或者是程序域<br>Available Tags:<br>完成</li>
+</ul>
+<ol start="19">
+<li>RSLogix 5000 位指令<br>RSLogix5000指令集.2.计时器和计数器指令<br>比较指令<br>计算和算术指令<br>高级算术指令<br>三角函数指令<br>传送/转换及逻辑运算指令<h1 id="RSLogix-5000编程"><a href="#RSLogix-5000编程" class="headerlink" title="RSLogix 5000编程"></a>RSLogix 5000编程</h1></li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/10/02/AB PLC/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-PP测试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
